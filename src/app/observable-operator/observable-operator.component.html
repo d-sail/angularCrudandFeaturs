@@ -1,0 +1,28 @@
+<div class="container">
+    <form [formGroup]="postData">
+        <label for="title" class="label">Title</label>
+        <input type="text" name="title" id="title" formControlName="title">
+        <label for="content" class="label">Content</label>
+        <input type="text" name="content" id="content" formControlName="content">
+        <button class="sent-post" type="submit" (click)="onSubmit()">Sent Post</button>
+        <button class="fatch-post" (click)="getPostData()">Fatch Post</button>
+        <button class="clear-post" (click)="onDeletePost()">Clear Post</button>
+    </form>
+
+    <hr>
+    <hr>
+    <br>
+    <div class="postDisplay">
+        <p *ngIf="postArray.length < 1 && !isLoading">No Data Available</p>
+        <ul *ngIf="postArray.length >= 1 && !isLoading">
+            <li *ngFor="let data of postArray; let i = index; trackBy: trackById">
+                <h2>{{data.title}} {{data.id}}</h2>
+                <p>{{data.content}}</p>
+                <br>
+                <hr>
+            </li>
+        </ul>
+        <p *ngIf="isLoading">Loading...</p>
+        <p>{{error}}</p>
+    </div>
+</div>

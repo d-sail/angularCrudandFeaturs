@@ -1,0 +1,84 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Dwidish Sail",
+      "gender": "Male",
+      "contactPreference": "Phone",
+      "phoneNumber": 2345978640,
+      "email": "dwisail.72@gmail.com",
+      "dateOfBirth": "1979/11/20",
+      "department": "2",
+      "isActive": true,
+      "photoPath": "./assets/images/dwi.png"
+    },
+    {
+      "id": 2,
+      "name": "Arnav Sail",
+      "gender": "Male",
+      "contactPreference": "Phone",
+      "phoneNumber": 5432978640,
+      "email": "sailarnav@gmail.com",
+      "dateOfBirth": "1976/3/25",
+      "department": "3",
+      "isActive": false,
+      "photoPath": "assets/images/arnav.png"
+    },
+    {
+      "id": 3,
+      "name": "Mamata Sail",
+      "gender": "Female",
+      "contactPreference": "Phone",
+      "phoneNumber": "34345",
+      "email": "mamtasail@gmail.com",
+      "dateOfBirth": "1975/11/18",
+      "department": "3",
+      "isActive": true,
+      "photoPath": "assets/images/mam.png"
+    }
+  ],
+  "postData": [
+    {
+      "title": "Dwidish Sail",
+      "content": "UI Developer",
+      "id": 1
+    },
+    {
+      "title": "Arnav Sail",
+      "content": "Downhill Cyclist ",
+      "id": 2
+    },
+    {
+      "title": "Mamata Sail",
+      "content": "Maoo! Maoooo!",
+      "id": 3
+    },
+    {
+      "title": "Somnath Kale",
+      "content": "Angular Expert",
+      "id": 4
+    },
+    {
+      "title": "Maths",
+      "content": "NodeJs Porject",
+      "id": 5
+    },
+    {
+      "title": "szdf",
+      "content": "Sail",
+      "id": 6
+    },
+    {
+      "title": "Arnav Sail",
+      "content": "Won",
+      "id": 7
+    },
+    {
+      "title": "szdf",
+      "content": "Angular Expert",
+      "id": 8
+    }
+  ],
+  "chessData" : ["a", "b", "c", "d", "e", "f", "g", "h"]
+  
+}

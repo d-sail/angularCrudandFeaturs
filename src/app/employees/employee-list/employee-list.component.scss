@@ -1,0 +1,63 @@
+div.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 90vh;
+
+    main.emp-main {
+        width: 80%;
+        height: auto;
+        border: 1px solid;
+        border-radius: 5px;
+        background: lightblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        div.all-emp {
+            display: flex;
+            flex-direction: column;
+            width: 98%;
+            height: auto;
+            border: 1px solid blue;
+            border-radius: 5px;
+            margin: 10px 0 10px 0;
+
+            h3.emp-header {
+                width: 100%;
+                background: blue;
+                color: #fff;
+                border-radius: 5px 5px 0 0;
+                text-align: left;
+                margin: 0 0 10px 0px;
+                padding: 10px;
+            }
+
+            div.emp {
+                display: flex;
+                align-items: center;
+
+                div.epm-img img {
+                    margin: 0 0 0 20px;
+                    width: 200px;
+                    height: 200px;
+                }
+
+                div.emp-properties {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 100%;
+                }
+
+                li {
+                    line-height: 25px;
+                }
+                
+            }
+        }
+    
+    }
+
+}

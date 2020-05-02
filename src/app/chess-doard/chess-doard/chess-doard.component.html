@@ -1,0 +1,64 @@
+<div class="container">
+    <!-- <div class="chessBoard"> This can be solution one to dispaly chess board
+    <ul>
+        <li class="board" *ngFor="let key of chessBoard; let isOdd=odd; let i = index">
+            <p [ngClass]="(isOdd == false)? 'even' : 'odd'">{{key.a + ' ' + i}}</p>
+            <p [ngClass]="(isOdd == false)? 'odd' : 'even'">{{key.b + ' ' + i}}</p>
+            <p [ngClass]="(isOdd == false)? 'even' : 'odd'">{{key.c + ' ' + i}}</p>
+            <p [ngClass]="(isOdd == false)? 'odd' : 'even'">{{key.d + ' ' + i}}</p>
+            <p [ngClass]="(isOdd == false)? 'even' : 'odd'">{{key.e + ' ' + i}}</p>
+            <p [ngClass]="(isOdd == false)? 'odd' : 'even'">{{key.f + ' ' + i}}</p>
+            <p [ngClass]="(isOdd == false)? 'even' : 'odd'">{{key.g + ' ' + i}}</p>
+            <p [ngClass]="(isOdd == false)? 'odd' : 'even'">{{key.h + ' ' + i}}</p>
+        </li>
+    </ul>
+</div> -->
+    <!-- The below is the right solution to iterate over chess array of object and to display chess board -->
+    <div class="chessBoard">
+        <h3>Chess Board</h3>
+        <ul>
+            <li class="board" *ngFor="let key of chessBoard; let isOdd=odd; let i = index"
+                [ngClass]="isOdd? 'odd' : 'even'">
+                <!-- {{ key | json}} {{i}} -->
+                <p *ngFor="let val of key | keyvalue ; let isOdd=odd">
+                    <!-- {{val.key | json}} -->
+                    {{val.value}}
+                </p>
+            </li>
+        </ul>
+    </div>
+    <!-- This example shows how to iterate over JS object -->
+    <div class="iteratedObject">
+        <h3>JS Object iteration</h3>
+        <p *ngFor="let xyz of obj | keyvalue">
+            <!-- {{xyz | json}} -->
+            {{ xyz.key}}
+            {{xyz.value}}
+        </p>
+    </div>
+    <div class="nestedIteratedObject">
+        <h3>Nested Object iterated using ngFor loop</h3>
+        <div *ngFor="let pqr of newObj | keyvalue">
+            <!-- {{pqr | json}} -->
+            <!-- {{pqr.key}} -->
+                 <!-- {{pqr.value | json}} -->
+            <ul>
+                <li *ngFor="let keys of pqr.value | keyvalue">
+                    <!-- {{keys | json}} -->
+                    <!-- {{keys.key | json}} -->
+                    <!-- {{keys.value | json}} -->
+                    <span *ngFor="let abc of keys.value | keyvalue">
+                        <!-- {{abc | json}}  -->
+                        <!-- {{abc.key}} -->
+                        <!-- {{abc.value}} -->
+                        <p *ngFor="let def of abc.value | keyvalue">
+                            <!-- {{def | json}} -->
+                            {{def.key}}:-
+                            {{def.value}}
+                        </p>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

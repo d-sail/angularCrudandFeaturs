@@ -1,0 +1,34 @@
+<div class="container">
+    <main class="emp-main">
+        <div class="all-emp" *ngFor="let employee of employees">
+            <h3 class="emp-header">
+                {{ employee.name }}
+            </h3>
+            <div class="emp">
+                <div class="epm-img">
+                    <img [src]="employee.photoPath" alt="employee photo">
+                </div>
+                <div class="emp-properties">
+                    <ul>
+                        <li>Gender</li>
+                        <li>Contact Preference</li>
+                        <li>Date of Birth</li>
+                        <li>Phone</li>
+                        <li>Email</li>
+                        <li>Department</li>
+                        <li>Is Active</li>
+                    </ul>
+                    <ul>
+                        <li><span>: </span>{{ employee.gender }}</li>
+                        <li><span>: </span>{{ employee.contactPreference }}</li>
+                        <li><span>: </span>{{ employee.dateOfBirth }}</li>
+                        <li><span>: </span>{{ employee.phoneNumber }}</li>
+                        <li><span>: </span>{{ employee.email }}</li>
+                        <li><span>: </span>{{ employee.department }}</li>
+                        <li><span>: </span>{{ employee.isActive }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
