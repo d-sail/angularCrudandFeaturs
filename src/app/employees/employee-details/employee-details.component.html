@@ -1,0 +1,48 @@
+<div class="container">
+    <main class="emp-main">
+        <div class="all-emp">
+            <h3 class="emp-header">
+                {{ employee.fName }} {{ employee.lName }}
+            </h3>
+            <div class="emp">
+                <div class="epm-img">
+                    <!-- <img [src]="employee.photoPath" alt="employee photo"> -->
+                </div>
+                <div class="emp-properties">
+                    <ul>
+                        <li>Email</li>
+                        <li>Phone</li>
+                        <li>Contact Preference</li>
+                        <li>Gender</li>
+                        <li>Date of Birth</li>
+                        <li>Department</li>
+                        <li>Skilles</li>
+                        <li>Exprince in Years</li>
+                        <li>Proficiance</li>
+                        <li>Is Active</li>
+                    </ul>
+                    <ul>
+                        <li><span>: </span>{{ employee.email }}</li>
+                        <li><span>: </span>{{ employee.phoneNumber }}</li>
+                        <li><span>: </span>{{ employee.contactPref }}</li>
+                        <li><span>: </span>{{ employee.gender }}</li>
+                        <li><span>: </span>{{ employee.dob | date:"dd/MM/yyyy"}}</li>
+                        <li><span>: </span>{{ employee.department }}</li>
+                        <li><span>: </span>{{ employee.department }}</li>
+                        <li><span>: </span>{{ employee.department }}</li>
+                        <li><span>: </span>{{ employee.department }}</li>
+                        <li><span>: </span>{{ employee.isActive }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="back-link">
+                <button class="backToList" type="button" [routerLink]="['/employees', {id:employee.id}]">Back to
+                    List</button>
+                <div class="back-next-btns">
+                    <button class="back-btn" type="button" (click)="onPrivousEmployee()">Privous</button>
+                    <button class="next-btn" type="button" (click)="onNextEmployee()">Next</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

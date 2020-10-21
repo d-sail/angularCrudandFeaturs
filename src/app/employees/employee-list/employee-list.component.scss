@@ -1,9 +1,11 @@
+@import '../../global-styles.scss';
+
 div.container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
 
     main.emp-main {
         width: 80%;
@@ -24,21 +26,34 @@ div.container {
             border: 1px solid blue;
             border-radius: 5px;
             margin: 10px 0 10px 0;
+            // &:hover {
+            //     cursor: pointer;
+            //     .emp {
+            //         display: block;
+            //         display: flex;
 
-            h3.emp-header {
+            //     }
+            // }
+            .viewedEmp {
+                background: $green !important;
+            }
+            .emp-header {
                 width: 100%;
-                background: blue;
-                color: #fff;
+                background: $dark-bule;
+                color: $white;
                 border-radius: 5px 5px 0 0;
                 text-align: left;
-                margin: 0 0 10px 0px;
+                margin: 0 0 0px 0px;
                 padding: 10px;
+                &:hover {
+                    cursor: pointer;
+                }
             }
-
             div.emp {
                 display: flex;
                 align-items: center;
-
+                margin: 10px 0px 0px 0px;
+                cursor: pointer;
                 div.epm-img img {
                     margin: 0 0 0 20px;
                     width: 200px;
@@ -50,14 +65,10 @@ div.container {
                     justify-content: space-around;
                     width: 100%;
                 }
-
                 li {
                     line-height: 25px;
                 }
-                
             }
         }
-    
     }
-
 }

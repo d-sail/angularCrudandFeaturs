@@ -1,7 +1,8 @@
 <div class="container">
     <form [formGroup]="postData">
         <label for="title" class="label">Title</label>
-        <input type="text" name="title" id="title" formControlName="title">
+        <input type="text" name="title" id="title" formControlName="title" (input)="onTitleEntered($event)">
+        <label>{{ serverTitle }}</label>
         <label for="content" class="label">Content</label>
         <input type="text" name="content" id="content" formControlName="content">
         <button class="sent-post" type="submit" (click)="onSubmit()">Sent Post</button>

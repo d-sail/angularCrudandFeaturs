@@ -1,11 +1,17 @@
 export interface EmployeeInterface {
     id: number;
-    name: string;
-    gender: string;
-    email?: string;
+    fName: string;
+    lName: string;
+    photoPath: string;
+    contactPref: string;
     phoneNumber?: number;
-    dateOfBirth: Date;
-    department: string;
+    email?: string;
+    dob: Date;
+    gender: string;
     isActive: boolean;
+    department: string;
+    skillName: string;
+    numberOfYears: number;
+    proficiance: string;
     imgPath: string;
 }

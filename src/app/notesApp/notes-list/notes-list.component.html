@@ -1,0 +1,16 @@
+<div class="notes-list-container">
+    <div class="notes-filter-bar">
+        <input class="filter-input" type="text" placeholder="Filter" [(ngModel)]="serachTerm">
+    </div>
+    <div class="notes-content" *ngFor="let notes of notesData | filter:serachTerm">
+        <div (click)="onClickEditNote(notes.id)">
+            <h1 class="notes-title">Title: {{notes.notesTitle}}</h1>
+            <!-- <p>{{notes.notesTitle}}</p> -->
+            <p class="notes-body">{{notes.notesBody}}</p>
+        </div>
+        <div class="x-button" (click)="deleteNote(notes.id)"></div>
+    </div>
+    <div class="add-notes-button">
+        <button class="add-notes" type="button" (click)="onClickAddNotes()">Add Notes</button>
+    </div>
+</div>

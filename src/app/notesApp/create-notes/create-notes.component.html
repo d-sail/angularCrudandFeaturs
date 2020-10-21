@@ -1,0 +1,16 @@
+<div class="create-notes-comtainer">
+    <form noNgForm [formGroup]="notesInput" (ngSubmit)="onSubmit()">
+        <div class="create-notes-title">
+            <label class="label-title" for="input-title">Title</label>
+            <input class="input-title" type="text" formControlName="notesTitle" placeholder="Enter Notes Title">
+        </div>
+        <div class="create-notes-body">
+            <label class="label-body" for="input-body">Body</label>
+            <textarea class="input-body" name="body" id="" rows="10" formControlName="notesBody" placeholder="Enter Notes body here... "></textarea>
+        </div>
+    </form>
+    <div class="create-notes-buttons">
+        <button class="cancle" type="button" (click)="onCancle()">Cancle</button>
+        <button class="save" type="submit" (click)="onSubmit()">Save</button>
+    </div>
+</div>

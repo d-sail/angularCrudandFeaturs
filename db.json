@@ -1,40 +1,74 @@
 {
   "employees": [
     {
-      "id": 1,
-      "name": "Dwidish Sail",
-      "gender": "Male",
-      "contactPreference": "Phone",
-      "phoneNumber": 2345978640,
+      "fName": "Dwidish",
+      "lName": "Sail",
+      "contactPref": "phone",
+      "dob": "9176-01-21",
+      "phoneNumber": "9999999999",
       "email": "dwisail.72@gmail.com",
-      "dateOfBirth": "1979/11/20",
-      "department": "2",
+      "gender": "male",
       "isActive": true,
-      "photoPath": "./assets/images/dwi.png"
+      "department": "uiDeveloper",
+      "skills": {
+        "skillName": "Angular",
+        "numberOfYears": 1,
+        "proficiance": "intermediate"
+      },
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Arnav Sail",
-      "gender": "Male",
-      "contactPreference": "Phone",
-      "phoneNumber": 5432978640,
-      "email": "sailarnav@gmail.com",
-      "dateOfBirth": "1976/3/25",
-      "department": "3",
+      "fName": "Arnav",
+      "lName": "Sail",
+      "contactPref": "email",
+      "dob": "2004-06-18",
+      "phoneNumber": "9822444071",
+      "email": "arnavsail@gmail.com",
+      "gender": "male",
       "isActive": false,
-      "photoPath": "assets/images/arnav.png"
+      "department": "systems",
+      "skills": {
+        "skillName": "JavaScript",
+        "numberOfYears": 2,
+        "proficiance": "beginner"
+      },
+      "id": 2
     },
     {
-      "id": 3,
-      "name": "Mamata Sail",
-      "gender": "Female",
-      "contactPreference": "Phone",
-      "phoneNumber": "34345",
-      "email": "mamtasail@gmail.com",
-      "dateOfBirth": "1975/11/18",
-      "department": "3",
+      "fName": "Arnav",
+      "lName": "Sail",
+      "contactPref": "phone",
+      "dob": "2020-10-21",
+      "phoneNumber": "9822444071",
+      "email": "arnavsail@gmail.com",
+      "gender": "male",
       "isActive": true,
-      "photoPath": "assets/images/mam.png"
+      "department": "2",
+      "imgPath": "",
+      "skills": {
+        "skillName": "Studant",
+        "numberOfYears": 16,
+        "proficiance": "intermediate"
+      },
+      "id": 5
+    },
+    {
+      "fName": "Dwidish",
+      "lName": "Sail",
+      "contactPref": "phone",
+      "dob": "2020-10-03",
+      "phoneNumber": "9999999999",
+      "email": "dwisail.72@gmail.com",
+      "gender": "male",
+      "isActive": true,
+      "department": "2",
+      "imgPath": "assets/images/dwi.png",
+      "skills": {
+        "skillName": "Angular",
+        "numberOfYears": 2,
+        "proficiance": "intermediate"
+      },
+      "id": 6
     }
   ],
   "postData": [
@@ -77,8 +111,38 @@
       "title": "szdf",
       "content": "Angular Expert",
       "id": 8
+    },
+    {
+      "title": "",
+      "content": "",
+      "id": 9
     }
   ],
-  "chessData" : ["a", "b", "c", "d", "e", "f", "g", "h"]
-  
+  "chessData": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h"
+  ],
+  "createNotes": [
+    {
+      "notesTitle": "Test...",
+      "notesBody": "Testing the feature of angular...",
+      "id": 3
+    },
+    {
+      "notesTitle": "Notes for today",
+      "notesBody": "Dwidish Sail",
+      "id": 4
+    },
+    {
+      "notesTitle": "New Note Update",
+      "notesBody": "New Note Update",
+      "id": 5
+    }
+  ]
 }

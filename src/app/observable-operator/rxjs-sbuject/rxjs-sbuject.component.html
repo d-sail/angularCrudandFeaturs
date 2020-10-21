@@ -1,0 +1,10 @@
+<div class="links">
+    <li class="user-1" [routerLink]="['subject/user', 1]">User 1 </li>
+    <li class="user-2" [routerLink]="['subject/user', 2]">User 2</li>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>
+
+<h1>User with <strong>ID: {{ user.id }}</strong> was loaded, and his name is <strong>{{user.name}}</strong></h1>
+<!-- <button (click)="onActivate()">Activate!</button> -->

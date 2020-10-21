@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+$purple: #a59ad7;
+$pink: #fe76c2;
+$blue: #37c7f2;
+
+$light-red: #fff3f3;
+$light: #fafcff;
+$black: black;
+$gray: gray;
+$white: #fff;
+$light-gray: #efefef;
+$red: red;
+$green: #2e8b57;
+$dark-bule: #2967DE;
+
+
+// Notes App Global Styles
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Nunito", sans-serif;
+    background-color: $light;
+    // Default app size
+    height: 100%;
+    // overflow: hidden !important;
+    // Default app font size 18px
+    font-size: 18px !important;
+}
+
+li {
+    list-style: none;
+}
+label {
+    display: block;
+}

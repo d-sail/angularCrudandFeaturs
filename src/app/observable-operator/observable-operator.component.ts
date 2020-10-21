@@ -15,6 +15,8 @@ export class ObservableOperatorComponent implements OnInit {
   postArray = [];
   isLoading = false;
   error = null;
+  serverTitle = '';
+
   errorMessage = new Subject<string>();
 
   constructor(private httpClient: HttpClient,
@@ -71,4 +73,10 @@ export class ObservableOperatorComponent implements OnInit {
       this.error = error.message;
     });
   }
+
+  // this is to practice the databinding $event property porvided by angular
+  onTitleEntered(event: Event) {
+    this.serverTitle = (event.target as HTMLInputElement).value;
+  }
+
 }

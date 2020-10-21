@@ -1,0 +1,54 @@
+@import "../../global-styles.scss";
+
+.create-notes-comtainer {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 500px;
+    margin: auto;
+    .create-notes-title {
+        margin: 0px 0px 15px 0px;
+        .label-title {
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .input-title {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: $light-gray;
+            width: 100%;
+        }
+    }
+    .create-notes-body {
+        .label-body {
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .input-body {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: $light-gray;
+            width: 100%;           
+        }
+    }
+    .create-notes-buttons {
+        display: flex;
+        justify-content: flex-end;
+        margin: 15px 0 0 0;
+        .cancle {
+            margin: 0 20px 0 0;
+            font-size: 16px;
+        }
+        .save {
+            font-size: 16px;
+            background: $green;
+            border: none;
+            border-radius: 2px;
+            padding: 10px 15px 10px 15px;
+        }
+    }
+}

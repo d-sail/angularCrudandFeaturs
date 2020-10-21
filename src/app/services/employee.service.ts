@@ -13,8 +13,16 @@ export class EmployeeService {
 
   constructor(private httpClient: HttpClient) { }
 
+  postEmployees(empData: EmployeeInterface[]): Observable<EmployeeInterface[]> {
+    return this.httpClient.post<EmployeeInterface[]> (`${this.baseURL}employees`, empData);
+  }
+
   getEmployees(): Observable<EmployeeInterface[]> {
     return this.httpClient.get<EmployeeInterface[]> (`${this.baseURL}employees`);
+  }
+
+  getEmployeeById(eI: number): Observable<EmployeeInterface> {
+    return this.httpClient.get<EmployeeInterface> (`${this.baseURL}employees/${eI}`);
   }
 
 }

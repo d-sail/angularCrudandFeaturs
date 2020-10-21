@@ -63,7 +63,6 @@ export class ChessDoardComponent implements OnInit {
     for (let i = 1; i <= 8; i++) {
       arr.push({ a: `A${i}`, b: `B${i}`, c: `C${i}`, d: `D${i}`, e: `E${i}`, f: `F${i}`, g: `G${i}`, h: `H${i}` });
     }
-    console.log('dwi', this.chessBoard);
   }
 
 }

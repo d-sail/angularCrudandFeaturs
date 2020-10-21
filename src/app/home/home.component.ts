@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+// tslint:disable-next-line: no-conflicting-lifecycle
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public show = false;
+  public buttonName = 'Show';
 
-  ngOnInit(): void {
+  constructor() {
+  }
+
+  ngOnInit() {
+  }
+
+
+  toggle() {
+    this.show = !this.show;
+
+    // CHANGE THE NAME OF THE BUTTON.
+    if (this.show) {
+      this.buttonName = 'Hide';
+    }
+    else {
+      this.buttonName = 'Show';
+    }
   }
 
 }

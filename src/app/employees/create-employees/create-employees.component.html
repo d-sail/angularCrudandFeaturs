@@ -1,1 +1,77 @@
-<p>create-employees works!</p>
+<div class="container">
+    <form [formGroup]="employeeForm" #createEmployeeRef>
+        <div class="create-emps">
+            <h3 class="empsTitle">Create Employees</h3>
+            <div class="empsPersonal">
+                <label for="fName">First Name: </label>
+                <input type="text" name="fName" formControlName="fName">
+                <label for="lName">Last Name: </label>
+                <input type="text" name="lName" formControlName="lName">
+            </div>
+            <div class="contact-pref">
+                <h3>Contact prefrances</h3>
+                <label for="phone">Phone: </label>
+                <input type="radio" value="phone" formControlName="contactPref">
+                <label for="email">Email: </label>
+                <input type="radio" value="email" formControlName="contactPref">
+            </div>
+            <div class="contactDetails">
+                <label for="lName">Phone: </label>
+                <input type="text" name="phone" formControlName="phoneNumber">
+                <label for="lName">E-mail: </label>
+                <input type="text" name="email" formControlName="email">
+            </div>
+            <div class="dob">
+                <label for="dob">Date of Birth: </label>
+                <input type="date" id="dob" formControlName="dob">
+            </div>
+            <div class="gender">
+                <h3>Gender</h3>
+                <label for="male">Male: </label>
+                <input type="radio" value="male" formControlName="gender">
+                <label for="female">Female: </label>
+                <input type="radio" value="female" formControlName="gender">
+            </div>
+            <div class="isActive">
+                <label for="isActive">Is Active: </label>
+                <input type="checkbox" value="isActive" formControlName="isActive">
+            </div>
+            <div class="department">
+                <label for="department">Department: </label>
+                <select class="selectDepartment" value="department" formControlName="department">
+                    <option *ngFor="let deps of departments" [value]="deps.id">
+                        {{deps.name}}
+                    </option>
+                </select>
+            </div>
+            <div class="skills" formGroupName="skills">
+                <h3 class="skillTitle">Skills and Exprince in Year</h3>
+                <input type="text" placeholder="Skill name" formControlName="skillName">
+                <input type="number" placeholder="Number of Years" formControlName="numberOfYears">
+                <div class="proficiance">
+                    <h3>Proficiance: </h3>
+                    Beginner: <input class="radio" type="radio" value="beginner" formControlName="proficiance">
+                    Intermediate: <input class="radio" type="radio" value="intermediate" formControlName="proficiance">
+                    Advanced: <input class="radio" type="radio" value="advanced" formControlName="proficiance">
+                </div>
+            </div>
+            <div class="empPhoto">
+                <div class="photoPath">
+                    <h3>Photo Path</h3>
+                    <input type="text" [(ngModel)]="photoPath" formControlName="imgPath">
+                </div>
+                <button class="button" type="button" (click)="onImgPreview()" *ngIf="photoPath !== '' && photoPath !== null">
+                    {{imgPreview? "Hide ": "Show "}}Photo
+                </button>
+                <div class="imgPreview">
+                    <img class="empImage" [src]="photoPath" alt="Employee Photo" height="150px" width="150px" *ngIf="imgPreview">
+                </div>
+            </div>
+            <div class="buttonToolBar">
+                <button class="button" type="submit" (click)="onEnployeeFormSave()">Save Employee</button>
+                <button class="button" type="submit" (click)="onEnployeeFormSave()">Save Employee</button>
+                <button class="button" type="submit" (click)="onEnployeeFormSave()">Save Employee</button>
+            </div>
+        </div>
+    </form>
+</div>

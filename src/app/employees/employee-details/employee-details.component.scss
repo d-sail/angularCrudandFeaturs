@@ -1,0 +1,32 @@
+@import '../../global-styles.scss';
+@import '../employee-list/employee-list.component.scss';
+
+
+.back-link {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .backToList {
+        border: none;
+        border-radius: 3px;
+        color: $white;
+        background: $dark-bule;
+        padding: 5px;
+        margin: 0 0 10px 10px;
+        font-size: 14px;
+    }
+    .back-next-btns {
+        display: flex;
+        // justify-content: space-between;
+        .back-btn, .next-btn {
+            border: none;
+            border-radius: 3px;
+            color: $white;
+            background: $dark-bule;
+            padding: 5px;
+            margin: 0 10px 10px 0;
+            font-size: 14px;
+            width: 80px;
+        }
+    }
+}

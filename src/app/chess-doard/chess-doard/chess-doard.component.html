@@ -20,8 +20,9 @@
             <li class="board" *ngFor="let key of chessBoard; let isOdd=odd; let i = index"
                 [ngClass]="isOdd? 'odd' : 'even'">
                 <!-- {{ key | json}} {{i}} -->
-                <p *ngFor="let val of key | keyvalue ; let isOdd=odd">
+                <p *ngFor="let val of key | keyvalue ; let isOdd = odd">
                     <!-- {{val.key | json}} -->
+                    <!-- {{isOdd}} -->
                     {{val.value}}
                 </p>
             </li>

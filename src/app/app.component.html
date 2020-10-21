@@ -1,11 +1,18 @@
 <div class="container">
   <nav>
     <ul class="nav-list">
-      <li class="nav-links"><a routerLinkActive="active" routerLink="home">Home <span> | </span></a></li>
-      <li class="nav-links"><a routerLinkActive="active" routerLink="employees">Employees <span> | </span></a></li>
-      <li class="nav-links"><a routerLinkActive="active" routerLink="create"></a>Create Employee <span> | </span></li>
-      <li class="nav-links"><a routerLinkActive="active" routerLink="obsOper">Observable Operators <span> | </span></a></li>
-      <li class="nav-links"><a routerLinkActive="active" routerLink="chess">Chess Board <span> | </span></a></li>
+      <li class="nav-links"><a routerLinkActive="active" routerLink="home">Home</a></li>
+      <li class="nav-links"><a routerLinkActive="active" routerLink="employees">Employees</a></li>
+      <li class="nav-links"><a routerLinkActive="active" routerLink="create">Create Employee</a></li>
+      <div class="dropdownNavBar">
+        <ul class="dropdown-menu">
+          <li class="dropdown">Dropdown *</li>
+          <li class="nav-links"><a routerLinkActive="active" routerLink="obsOper">Observable Operators</a></li>
+          <li class="nav-links"><a routerLinkActive="active" routerLink="subject">Rxjs Subject</a></li>
+          <li class="nav-links"><a routerLinkActive="active" routerLink="chess">Chess Board</a></li>
+          <li class="nav-links"><a routerLinkActive="active" routerLink="notes">Notes App</a></li>
+        </ul>
+      </div>
     </ul>
   </nav>
 </div>
